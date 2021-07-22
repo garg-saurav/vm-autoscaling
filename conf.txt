@@ -1,0 +1,15 @@
+1. Get the MAC address of vm1: mac1
+`virsh dumpxml vm1_name | grep mac`
+
+2. Get the MAC address of vm2: mac2
+`virsh dumpxml vm2_name | grep mac`
+
+2. Change the default DHCP range to exclude first 100 addresses using `virsh net-edit default`
+<range start='192.168.122.100' end='192.168.122.254'/>
+
+3. Add <host mac='mac1' name='vm1_name' ip='192.168.122.2'/> line for vm1 using `virsh net-edit default`
+   Add <host mac='mac2' name='vm2_name' ip='192.168.122.3'/> line for vm2 using `virsh net-edit default`
+
+4. Static IP: 
+	vm1: 192.168.122.2
+	vm2: 192.168.122.3
