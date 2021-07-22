@@ -1,5 +1,6 @@
 # vm-autoscaling
-Cloud management system using the libvirt API
+Cloud management system using the libvirt API <br>
+Detailed problem statement: [here](https://www.cse.iitb.ac.in/~cs695/pa/pa2.html)
 
 ## Monitoring
 - Continuous monitoring of CPU utilisation by server VMs
